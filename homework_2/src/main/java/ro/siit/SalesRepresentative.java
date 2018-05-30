@@ -12,20 +12,7 @@ import java.util.Scanner;
  */
 public class SalesRepresentative {
 
-    /**
-     * This method is used to build the team of Sales Reps and display the names of the team members;
-     * The user is prompted to insert the Sales Reps one by one, along with the number of sales and the quota/sale;
-     *
-     * @param userInput Calls the Scanner object from
-     * @param noOfEmployees Reps in a team
-     * @param repsName The names of the Sales Reps as inserted by the user
-     * @param repsSales The number of sales a rep makes
-     * @param quota The quota/sale of each Sales Rep
-     * @param totalRevenue The total amount that a Sales Rep makes
-     *
-     * @return the Reps names;
-     *
-     */
+
     public String getReps(Scanner userInput, int noOfEmployees, String[] repsName, int[] repsSales, double[] quota, double[] totalRevenue) {
         for (int i = 0; i < noOfEmployees; i++) {
             System.out.println("Please insert employee " + (i + 1));
@@ -42,16 +29,6 @@ public class SalesRepresentative {
     }
 
 
-
-    /**
-     * This is the algorithm that sorts the Sales Reps by revenue generated, in descending order;
-     *
-     * @param noOfEmployees Reps in a team;
-     * @param repsName The names of the Sales Reps as inserted by the user;
-     * @param totalRevenue The total amount that a Sales Rep makes;
-     *
-     * @return The Sales Representatives, sorted by revenue;
-     */
     public String sortRepsByRevenue(int noOfEmployees, String[] repsName, double[] totalRevenue) {
         for (int i = 1; i < noOfEmployees; i++) {
             double temp = 0;

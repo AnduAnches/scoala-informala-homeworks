@@ -11,13 +11,7 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        /**
-         * The main method will introduce the user to the application, call out the Scanner object
-         * in order to get the information from the keyboard.
-         * Displays the results from the SalesRepresentatives methods:
-         * a list with the Sales Representatives' names
-         * a list wit the SAles Reps ordered by revenue;
-         */
+
         System.out.printf("%n%nThis application will sort out your Sales Representatives, according to the revenue generated. %n");
 
         Scanner userInput = new Scanner(System.in);
