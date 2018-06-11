@@ -1,22 +1,40 @@
 package ro.siit.java.pds;
 
+/**
+ *The facility controls all the entries and exits of packages, manages the Filter Queue and assigns the vehicles needed for each operation
+ *
+ */
 public class Facility {
     private Address facilityAddress;
-    private FilterQueue deliveryQueue;
-    private FilterQueue transportQueue;
-    private Vehicle carID;
-    private Vehicle vanID;
-    private Vehicle truckID;
+    private Parcel[] packages;
+    private FilterQueue[] deliveryQueue;
+    private FilterQueue[] transportQueue;
+    private String[] vehicleID;
 
-    private void addToQueue (String trackingID){
+
+    /**
+     * Adds to a queue a package brought in by a car or a truck
+     * @param packagesAssigned
+     */
+    private void addToQueue (Parcel[] packagesAssigned){
 
     }
 
-    private void removeFromQueue (String trackingID){
+    /**
+     * Removes from a queue a package to be lifted by a truck or a van
+     * @param packagesAssigned
+     */
+    private void removeFromQueue (Parcel[] packagesAssigned){
 
     }
 
-    public String assignVehicle (String trackingID, Parcel parcel){
+
+    /**
+     * Assigns the packages to the suitable transport vehicle
+     * @param packages
+     * @param vehicleID
+     */
+    public void assignVehicle (Parcel[] packages, String vehicleID){
         return null;
     }
 }
