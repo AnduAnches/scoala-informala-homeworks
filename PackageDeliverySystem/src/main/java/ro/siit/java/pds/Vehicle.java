@@ -8,6 +8,7 @@ package ro.siit.java.pds;
  */
 public class Vehicle {
     private String vehicleID;
+    private String type;
     private int vehicleCapacity;
     public Parcel[] packagesAssigned;
 }

@@ -1,7 +1,8 @@
 package ro.siit.java.pds;
 
 /**
- * One of the main classes in the project. It gathers information about the tracking information(tracking history), logistical information (route of thye package, vehicle used) and sender and destination contact informations
+ * One of the main classes in the project. It gathers information about the tracking information(tracking history), logistical information (route of the package, vehicle used) and sender and destination contact information
+ *
  * @param trackingInfo
  * @param logisticalInfo
  * @param sender
@@ -9,8 +10,30 @@ package ro.siit.java.pds;
  */
 public class Parcel {
 
-    private TrackingInfo trackingInfo;
-    private LogisticalInfo logisticalInfo;
+    public TrackingInfo trackingInfo;
+    public LogisticalInfo logisticalInfo;
     private ContactInfo sender;
     private ContactInfo destination;
+
+    public ContactInfo getSender() {
+        return sender;
+    }
+
+    public void setSender(ContactInfo sender) {
+        this.sender = sender;
+    }
+
+    public ContactInfo getDestination() {
+        return destination;
+    }
+
+    public void setDestination(ContactInfo destination) {
+        this.destination = destination;
+    }
+
+    public String getDestinationCity() {
+        String destinationCity = destination.getAddress().getCity();
+        return destinationCity;
+    }
+
 }
