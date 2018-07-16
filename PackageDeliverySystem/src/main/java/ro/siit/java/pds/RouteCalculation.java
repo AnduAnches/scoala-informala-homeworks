@@ -100,7 +100,7 @@ public class RouteCalculation {
         Dijkstra.calculateShortestPathFromSource(graph, senderNode);
 
         List<Node> shortestRoute = destinationNode.getShortestPath();
-        List<String> routeCities = new ArrayList<String>();
+        List<String> routeCities = new ArrayList<>();
 
         for (Node city : shortestRoute)
             routeCities.add(city.toString());
