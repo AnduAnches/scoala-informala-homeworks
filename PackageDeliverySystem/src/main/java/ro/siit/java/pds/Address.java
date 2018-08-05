@@ -4,18 +4,10 @@ package ro.siit.java.pds;
  * This class stores the address information of users, facilities, destinations etc
  */
 public class Address {
-    private String country;
+
     private String city;
     private String street;
     private String zipCode;
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
 
     String getCity() {
         return city;

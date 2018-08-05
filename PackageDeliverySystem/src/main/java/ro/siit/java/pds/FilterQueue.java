@@ -6,8 +6,6 @@ import java.util.TreeSet;
 /**
  * In the filter queue packages are sorted alphabetically then prepared for assignment to a vehicle
  *
- * @param trackingID
- * @param packageAddDate
  * @return packageSort sorted alphabetically
  */
 public class FilterQueue {
@@ -35,12 +33,14 @@ public class FilterQueue {
 
     /**
      * Removes from a queue a package to be lifted by a truck or a van
-     *
-     * @param packagesAssigned
      */
-    public void removeFromQueue(Parcel[] packagesAssigned) {
+    public void removeFromTransportQueue(Parcel parcel) {
+        transportQueue.remove(parcel);
     }
 
+    public void removeFromDeliveryQueue(Parcel parcel) {
+        deliveryQueue.remove(parcel);
+    }
 
     public TreeSet<Parcel> getDeliveryQueue() {
         return deliveryQueue;

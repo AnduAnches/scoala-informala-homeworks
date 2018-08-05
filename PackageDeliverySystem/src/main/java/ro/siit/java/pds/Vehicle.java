@@ -1,32 +1,29 @@
 package ro.siit.java.pds;
 
+import java.util.ArrayList;
+
 /**
  * The vehicles are used to pick up the packages, transport them and ultimately deliver them. Each vehicle has
- *
  */
 
 public class Vehicle {
 
     private String type;
-    private int vehicleCapacity;
-    public Parcel[] packagesAssigned;
+    private ArrayList<Parcel> packagesAssigned = new ArrayList<>();
 
     public Vehicle(String type) {
 
         switch (type.toLowerCase()) {
             case "car": {
                 this.type = type;
-                this.vehicleCapacity = 3;
                 break;
             }
             case "van": {
                 this.type = type;
-                this.vehicleCapacity = 5;
                 break;
             }
             case "truck": {
                 this.type = type;
-                this.vehicleCapacity = 10;
                 break;
             }
 
@@ -37,7 +34,13 @@ public class Vehicle {
         return type;
     }
 
-    public int getVehicleCapacity() {
-        return vehicleCapacity;
+
+    public void retreivePackage(Parcel parcel) {
+        packagesAssigned.add(parcel);
+    }
+
+    public void deliverPackage(Parcel parcel) {
+        packagesAssigned.remove(parcel);
     }
 }
+
